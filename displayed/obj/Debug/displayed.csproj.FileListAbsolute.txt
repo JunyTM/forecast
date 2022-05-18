@@ -1,0 +1,16 @@
+E:\C#\forecast\displayed\bin\Debug\displayed.exe.config
+E:\C#\forecast\displayed\bin\Debug\displayed.exe
+E:\C#\forecast\displayed\bin\Debug\displayed.pdb
+E:\C#\forecast\displayed\obj\Debug\displayed.csproj.AssemblyReference.cache
+E:\C#\forecast\displayed\obj\Debug\displayed.csproj.SuggestedBindingRedirects.cache
+E:\C#\forecast\displayed\obj\Debug\MainWindow.g.cs
+E:\C#\forecast\displayed\obj\Debug\App.g.cs
+E:\C#\forecast\displayed\obj\Debug\displayed_MarkupCompile.cache
+E:\C#\forecast\displayed\obj\Debug\displayed_MarkupCompile.lref
+E:\C#\forecast\displayed\obj\Debug\MainWindow.baml
+E:\C#\forecast\displayed\obj\Debug\displayed.g.resources
+E:\C#\forecast\displayed\obj\Debug\displayed.Properties.Resources.resources
+E:\C#\forecast\displayed\obj\Debug\displayed.csproj.GenerateResource.cache
+E:\C#\forecast\displayed\obj\Debug\displayed.csproj.CoreCompileInputs.cache
+E:\C#\forecast\displayed\obj\Debug\displayed.exe
+E:\C#\forecast\displayed\obj\Debug\displayed.pdb
