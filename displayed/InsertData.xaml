@@ -1,0 +1,27 @@
+﻿<Window x:Class="displayed.InsertData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:displayed.Properties"
+        mc:Ignorable="d"
+        Title="InsertData" Height="450" Width="800">
+    <Grid>
+        <Label Content="Time" HorizontalAlignment="Left" Height="31" Margin="472,44,0,0" VerticalAlignment="Top" Width="51" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Altm" HorizontalAlignment="Left" Height="31" Margin="472,90,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Temp" HorizontalAlignment="Left" Height="31" Margin="472,134,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Hud" HorizontalAlignment="Left" Height="31" Margin="472,178,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Wdir" HorizontalAlignment="Left" Height="31" Margin="472,219,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Wspd" HorizontalAlignment="Left" Height="31" Margin="472,258,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Vis" HorizontalAlignment="Left" Height="31" Margin="472,301,0,0" VerticalAlignment="Top" Width="72" FontWeight="Bold" FontSize="16"/>
+        <TextBox Name="Time" HorizontalAlignment="Left" Height="22" Margin="549,49,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="Altm" HorizontalAlignment="Left" Height="22" Margin="549,95,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="232"/>
+        <TextBox Name="Temp" HorizontalAlignment="Left" Height="22" Margin="549,139,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="146"/>
+        <TextBox Name="Hud" HorizontalAlignment="Left" Height="22" Margin="549,183,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="193"/>
+        <TextBox Name="Wdir" HorizontalAlignment="Left" Height="22" Margin="549,224,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="193"/>
+        <TextBox Name="Wspd" HorizontalAlignment="Left" Height="22" Margin="549,263,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="146"/>
+        <TextBox Name="Vis" HorizontalAlignment="Left" Height="22" Margin="549,306,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="146"/>
+        <Image Source="E:\C#\forecast\displayed\img\map1.png" HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="448"/>
+        <Button Content="Create" HorizontalAlignment="Left" Height="45" Margin="574,359,0,0" VerticalAlignment="Top" Width="142" Click="Button_Click" Background="#FFD4C7C1" FontWeight="Bold"/>
+    </Grid>
+</Window>

@@ -1,13 +1,32 @@
 ﻿<Window x:Class="displayed.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:displayed"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ListReporter" Height="450" Width="800">
     <Grid>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged" Margin="0,10,0,-10"/>
+        <ListView Margin="10,98,10,10" SelectionChanged="ListView_SelectionChanged" Name="ListView" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="STT" Width="50" DisplayMemberBinding="{Binding STT}"/>
+                    <GridViewColumn Header="Time" Width="200" DisplayMemberBinding="{Binding Time}"/>
+                    <GridViewColumn Header="Altm" Width="80" DisplayMemberBinding="{Binding Altm}"/>
+                    <GridViewColumn Header="Temp" Width="80" DisplayMemberBinding="{Binding Temp}"/>
+                    <GridViewColumn Header="Hud" Width="80" DisplayMemberBinding="{Binding Hud}"/>
+                    <GridViewColumn Header="Wdir" Width="80" DisplayMemberBinding="{Binding Wdir}"/>
+                    <GridViewColumn Header="Wspd" Width="80" DisplayMemberBinding="{Binding Wspd}"/>
+                    <GridViewColumn Header="Vis" Width="80" DisplayMemberBinding="{Binding Vis}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
+        <Button Content="Insert" HorizontalAlignment="Left" Height="44" Margin="23,26,0,0" VerticalAlignment="Top" Width="133" Click="Button_Insert" Background="#FF4C37E4" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Height="44" Margin="203,26,0,0" VerticalAlignment="Top" Width="130" Background="#FF4C37E4" Foreground="White" Click="Button_Delete" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Filter" HorizontalAlignment="Left" Height="33" Margin="660,10,0,0" VerticalAlignment="Top" Width="112" Click="Button_Filter" Background="#FF796DD2" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Time:" HorizontalAlignment="Left" Height="28" Margin="461,56,0,0" VerticalAlignment="Top" Width="40"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="501,59,0,0" TextWrapping="Wrap" Text="dd/mm/yy" VerticalAlignment="Top" Width="123" Foreground="#FFB9A7A7"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="647,59,0,0" TextWrapping="Wrap" Text="dd/mm/yy" VerticalAlignment="Top" Width="125" Foreground="#FFB9A7A7"/>
     </Grid>
 </Window>
