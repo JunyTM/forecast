@@ -42,9 +42,9 @@
                 </TransformGroup>
             </Canvas.RenderTransform>
             <Label Content="Bạn chưa có tài khoản?" Height="39" Canvas.Left="20" Canvas.Top="141" Width="248" FontSize="22" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Button Name="Signin" Content="Đăng kí tài khoản tại đây !" Canvas.Left="40" Canvas.Top="204" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Height="42" FontSize="14" FontWeight="Bold" Foreground="White" Click="Signin_Click" BorderBrush="#FF7F95DA"/>
+            <Button Name="Signin" Content="Đăng kí tài khoản tại đây !" Canvas.Left="40" Canvas.Top="204" Background="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Height="42" FontSize="14" FontWeight="Bold" Foreground="White" Click="Signin_Click" BorderBrush="White"/>
         </Canvas>
-        <TextBox Height="30" Canvas.Left="225" TextWrapping="Wrap" Text="Name . . ." Canvas.Top="154" Width="197" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox Height="30" Canvas.Left="225" TextWrapping="Wrap" Text=". . . ." Canvas.Top="220" Width="197" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="userName" Height="30" Canvas.Left="225" TextWrapping="Wrap" Text="Name . . ." Canvas.Top="154" Width="197" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="passWord" Height="30" Canvas.Left="225" TextWrapping="Wrap" Text=". . . ." Canvas.Top="220" Width="197" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

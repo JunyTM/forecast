@@ -12,10 +12,10 @@
         <Label Content="Password" HorizontalAlignment="Left" Margin="357,155,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <Label Content="Repeat Password" HorizontalAlignment="Left" Margin="357,205,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <Label Content="Email" HorizontalAlignment="Left" Margin="357,268,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,109,0,0" TextWrapping="Wrap" Text="Name..." VerticalAlignment="Top" Width="199"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,162,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="199"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,213,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="199"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,275,0,0" TextWrapping="Wrap" Text="juny@st.phenikaa-uni.com" VerticalAlignment="Top" Width="199"/>
+        <TextBox Name="userName" HorizontalAlignment="Left" Height="26" Margin="530,109,0,0" TextWrapping="Wrap" Text="Name..." VerticalAlignment="Top" Width="199"/>
+        <TextBox Name="passWord" HorizontalAlignment="Left" Height="26" Margin="530,162,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="199"/>
+        <TextBox Name="resPassWord" HorizontalAlignment="Left" Height="26" Margin="530,213,0,0" TextWrapping="Wrap" Text=". . . ." VerticalAlignment="Top" Width="199"/>
+        <TextBox Name="email" HorizontalAlignment="Left" Height="26" Margin="530,275,0,0" TextWrapping="Wrap" Text="juny@st.phenikaa-uni.com" VerticalAlignment="Top" Width="199"/>
         <Button Content="Đăng Ký" HorizontalAlignment="Left" Height="39" Margin="276,353,0,0" VerticalAlignment="Top" Width="130" BorderBrush="White" Click="Button_Click" FontWeight="Bold" Foreground="#FF02050A">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

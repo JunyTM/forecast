@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SQLite;
+using System.Data;
 
 namespace displayed
 {
@@ -24,9 +26,33 @@ namespace displayed
             InitializeComponent();
         }
 
+        public void connectDB(String query)
+        {
+            const string env = @"Data Source = E:\C#\forecast\forecast.db";
+
+            SQLiteConnection connect = new SQLiteConnection(env);
+            connect.Open();
+            SQLiteCommand cmd = new SQLiteCommand(query, connect);
+            cmd.ExecuteNonQuery();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Đăng ký thành công");
+            if (passWord.Text.Equals(resPassWord.Text))
+            {
+                String query = "INSERT INTO profiles (account, passwork, gmail) values ('" +
+                        userName.Text + "', '" + passWord.Text + "', '" + email.Text + "'" +
+                        ");";
+                connectDB(query);
+                MessageBox.Show("Đăng ký thành công");
+                login log = new login();
+                log.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Nhập lại mật khẩu sai");
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
