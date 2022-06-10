@@ -40,12 +40,15 @@ namespace displayed
 
     public partial class MainWindow : Window
     {
-        FileView fileDelete = new FileView();
+        FileView selectItem = new FileView();
         public MainWindow()
         {
             InitializeComponent();
 
-
+            getAll();
+        }
+        public void getAll()
+        {
             string query = "SELECT * FROM hydrologicals";
             DataTable data = connectDB(query);
 
@@ -65,6 +68,7 @@ namespace displayed
                 });
             }
             ListView.ItemsSource= files;
+
         }
         public DataTable connectDB(String query)
         {
@@ -85,13 +89,8 @@ namespace displayed
             return data;
         }
 
+        
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            FileView selectItem = (FileView)ListView.SelectedItems;
-            MessageBox.Show(selectItem.Temp)
-
-        }
 
         private void Button_Insert(object sender, RoutedEventArgs e)
         {
@@ -102,23 +101,44 @@ namespace displayed
 
         private void Button_Filter(object sender, RoutedEventArgs e)
         {
+            String query = "SELECT * from hydrologicals where time >= '" + time_start.Text + "'  AND time <= '" + time_end + "' ORDER BY time ASC;";
+            DataTable data = connectDB(query);
 
+            List<FileView> files = new List<FileView>();
+            foreach (DataRow col in data.Rows)
+            {
+                files.Add(new FileView()
+                {
+                    STT = col["id"].ToString(),
+                    Time = col["time"].ToString(),
+                    Altm = col["altm"].ToString(),
+                    Temp = col["temp"].ToString(),
+                    Hud = col["hud"].ToString(),
+                    Wdir = col["wdir"].ToString(),
+                    Wspd = col["wspd"].ToString(),
+                    Vis = col["vis"].ToString(),
+                });
+            }
+            ListView.ItemsSource = files;
         }
 
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
-            /*
             const string env = @"Data Source = E:\C#\forecast\forecast.db";
-            String query = "DELETE FROM hydrologicals WHERE ";
+            String query = "DELETE FROM hydrologicals WHERE id = " + selectItem.STT;
 
             SQLiteConnection connect = new SQLiteConnection(env);
             connect.Open();
             SQLiteCommand cmd = new SQLiteCommand(query, connect);
             cmd.ExecuteNonQuery();
-            */
-
-            ListView.Items.RemoveAt(ListView.Items.IndexOf(ListView.SelectedItem));
-
+            getAll();
         }
+
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            selectItem = (FileView)ListView.SelectedItem;
+        }
+
     }
 }
