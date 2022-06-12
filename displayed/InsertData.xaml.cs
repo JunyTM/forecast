@@ -43,7 +43,7 @@ namespace displayed
                     Hud.Text + ", " + Wdir.Text + ", " + Wspd.Text + ", " + Vis.Text + 
                     ");";
             connectDB(query);
-            
+            MessageBox.Show("Tạo dữ liệu thành công");
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();

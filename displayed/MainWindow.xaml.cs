@@ -131,6 +131,7 @@ namespace displayed
             connect.Open();
             SQLiteCommand cmd = new SQLiteCommand(query, connect);
             cmd.ExecuteNonQuery();
+            MessageBox.Show("xóa thành công");
             getAll();
         }
 
