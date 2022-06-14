@@ -22,9 +22,10 @@
             </ListView.View>
         </ListView>
 
-        <Button Content="Insert" HorizontalAlignment="Left" Height="44" Margin="23,26,0,0" VerticalAlignment="Top" Width="133" Click="Button_Insert" Background="#FF4C37E4" Foreground="White" FontWeight="Bold" FontSize="14"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Height="44" Margin="203,26,0,0" VerticalAlignment="Top" Width="130" Background="#FF4C37E4" Foreground="White" Click="Button_Delete" FontSize="14" FontWeight="Bold"/>
+        <Button Content="Insert" HorizontalAlignment="Left" Height="44" Margin="10,26,0,0" VerticalAlignment="Top" Width="116" Click="Button_Insert" Background="#FF4C37E4" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Height="44" Margin="152,26,0,0" VerticalAlignment="Top" Width="112" Background="#FF4C37E4" Foreground="White" Click="Button_Delete" FontSize="14" FontWeight="Bold"/>
         <Button Content="Filter" HorizontalAlignment="Left" Height="33" Margin="660,10,0,0" VerticalAlignment="Top" Width="112" Click="Button_Filter" Background="#FF796DD2" Foreground="White" FontWeight="Bold"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="44" Margin="288,26,0,0" VerticalAlignment="Top" Width="112" Background="#FF4C37E4" Foreground="White" Click="Button_update" FontSize="14" FontWeight="Bold"/>
         <Label Content="Time:" HorizontalAlignment="Left" Height="28" Margin="461,56,0,0" VerticalAlignment="Top" Width="40" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="501,59,0,0" TextWrapping="Wrap" Text="2022-01-08 00:53:12" VerticalAlignment="Top" Width="129" Foreground="#FF4E4E4E" Name="time_start"/>
         <TextBox HorizontalAlignment="Left" Height="22" Margin="647,59,0,0" TextWrapping="Wrap" Text="2022-01-15 00:11:03" VerticalAlignment="Top" Width="125" Foreground="#FF4E4E4E" Name="time_end"/>

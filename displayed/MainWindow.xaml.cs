@@ -141,5 +141,11 @@ namespace displayed
             selectItem = (FileView)ListView.SelectedItem;
         }
 
+        private void Button_update(object sender, RoutedEventArgs e)
+        {
+            InsertData updateView = new InsertData(selectItem);
+            updateView.Show();
+            this.Close();
+        }
     }
 }

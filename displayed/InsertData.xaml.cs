@@ -21,8 +21,15 @@ namespace displayed
     /// </summary>
     public partial class InsertData : Window
     {
+        FileView selectItem = new FileView();
         public InsertData()
         {
+            InitializeComponent();
+        }
+
+        public InsertData(FileView item)
+        {
+            this.selectItem = item;
             InitializeComponent();
         }
 
@@ -52,6 +59,27 @@ namespace displayed
         private void Time_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_update(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                String query = "UPDATE  hydrologicals SET " +
+                    "time = '" + Time.Text + "', altm = " + Altm.Text + ", temp = " + 
+                    Temp.Text + ", hud = " + Hud.Text + ", wdir = " + Wdir.Text + ", wspd = " + 
+                    Wspd.Text + ", vis = " + Vis.Text + 
+                    " WHERE id = " + selectItem.STT + " ;";
+                connectDB(query);
+                MessageBox.Show("Cập nhập dữ liệu thành công");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chọn dữ liệu muốn cập nhập");
+            }
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
